@@ -1,5 +1,24 @@
 # CS560-Group2
   
+## Getting Started: Clone the Repository
+
+1. Create a folder for your project (optional):
+
+	**macOS & Windows:**
+	```bash
+	mkdir CS560-Group2
+	cd CS560-Group2
+	```
+
+2. Clone the repository:
+
+	```bash
+	git clone <repository-url>
+	cd CS560-Group2
+	```
+
+Replace `<repository-url>` with the actual URL of this repository (e.g., `https://github.com/Andrew-Gautier/CS560-Group2.git`).
+
 ## Python Environment Setup (macOS & Windows)
 
 ### 1. Create a Virtual Environment
