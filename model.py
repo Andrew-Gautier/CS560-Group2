@@ -11,7 +11,9 @@ class LSTMClassifier(nn.Module):
     def __init__(self):
         super().__init__()
 
-
+    def forward(self, x):
+        return x
+    
 def grid_parameter_tune():
     return
 def train_model():
