@@ -1,0 +1,45 @@
+Idea: we are training a model with one week of reddit sentiment about a stock, and our ground truth is the stocks direction in the subsequent week. 
+Raw posts dataframe
+Ticker_id
+From PRAW (Scraping individual posts with ticker mentions)
+post.id
+post.created_utc 
+post.title
+post.selftext
+post.ups                   # Upvotes count ✅
+post.downs                 # Downvotes count ✅  
+post.upvote_ratio          # Upvotes/(upvotes+downvotes) ✅
+post.num_comments          # Number of comments ✅
+post.score                 # Net score (ups - downs) ✅
+Post.subreddit.display_name # Subreddit
+From Yahoo finance
+Close
+Volume
+(maybe include [open, high, low?] )
+
+Preprocessing Steps
+Url / image removal 
+Handling US holidays (short weeks)
+Find complete weeks we can use
+5 days for one ticker with at least one post 
+Create label for true stock direction (what the stock did in the following week
+Handle posts with multiple ticker mentions
+
+Processed Inputs
+5 days of 
+Finbert embeddings
+Stock features
+Close
+Volume
+Sentiment features
+Sentiment mean
+Sentiment weighted from post engagement
+Engagement features
+Total upvotes
+Avg_upvotes
+Comment_engagement
+
+Outputs
+Next week direction (binary)
+Next week magnitude (expected volume of movement
+Next week confidence
