@@ -1,3 +1,17 @@
 .venv/
 __pycache__/
 tensors/
+# Ignore raw data
+*.csv
+*.csv.zst
+
+# Ignore models
+*.pt
+*.pkl
+
+# Ignore any data folders
+dashboard/10y_reddit_data.csv
+dashboard/10y_stock_data.csv
+dashboard/best_batch_size_model_20251209_012928.pt
+dashboard/best_oneday_full_model.pt
+dashboard/scaler.pkl

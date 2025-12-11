@@ -102,7 +102,7 @@ class LSTMClassifier(nn.Module):
         }
 
 
-stock_raw = pd.read_csv("../10y_stock_data.csv", header=[0, 1])
+stock_raw = pd.read_csv("10y_stock_data.csv", header=[0, 1])
 dates = pd.to_datetime(stock_raw.iloc[:, 0])
 stock_raw = stock_raw.iloc[:, 1:]
 
@@ -125,7 +125,7 @@ df_stock = (
     .reset_index()
 )
 
-df_reddit = pd.read_csv("../10y_reddit_data.csv")
+df_reddit = pd.read_csv("10y_reddit_data.csv")
 df_reddit["date"] = pd.to_datetime(df_reddit["created_utc"], unit="s").dt.normalize()
 
 ticker_map = {
@@ -158,14 +158,14 @@ df = (
 
 print("Merged data ready")
 
-with open("../scaler.pkl", "rb") as f:
+with open("scaler.pkl", "rb") as f:
     scaler = pickle.load(f)
 
 DEVICE = torch.device("cpu")
 
 try:
     model = torch.load(
-        "../best_oneday_full_model.pt",
+        "best_oneday_full_model.pt",
         map_location=DEVICE,
         weights_only=False
     )
