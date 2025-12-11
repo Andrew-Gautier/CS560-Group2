@@ -125,7 +125,7 @@ df_stock = (
     .reset_index()
 )
 
-df_reddit = pd.read_csv("10y_reddit_data.csv")
+df_reddit = pd.read_csv("../10y_reddit_data.csv")
 df_reddit["date"] = pd.to_datetime(df_reddit["created_utc"], unit="s").dt.normalize()
 
 ticker_map = {
